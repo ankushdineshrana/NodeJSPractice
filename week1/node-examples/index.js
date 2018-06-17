@@ -9,7 +9,18 @@ function solveRectangle(l,b){
     
     
     else{
-        console.log("The Area is "+rect.area(l,b)+" and Perimeter is "+rect.perimeter(l,b));
+        
+        console.log("Solvong the rectangle");
+        rect(l,b,(err,rectangle)=>{
+            if(err){
+                console.log("ERROR: "+err.message);
+            }
+            else{
+                console.log("The area of the rectangle is"+rectangle.area()+" and perimeter is"+rectangle.perimeter());
+
+            }
+        });
+        console.log("This statement is called after the callback function");
     }
 }
 
