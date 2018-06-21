@@ -1,15 +1,15 @@
 module.exports=(i,j,callback)=>{
 
     if(i<0 || j<0 || j<i){
-        setTimeout(()=>callback(new Error("Dimensions must be positive & j must be greater than i"),null),2000);
+        callback(new Error("Dimensions must be positive & j must be greater than i"),null);
     }
     else{
-        setTimeout(()=>callback(
+        callback(
             null,()=>{
-                for(var k=i;k<j;k++)
+                for(var k=i;k<9999999;k++)
                     console.log("The value is: "+k);
             }
-        ),2000)
+        )
     }
 
     
